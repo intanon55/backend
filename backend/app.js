@@ -37,6 +37,6 @@ app.post('/api/v1/change-richmenu', (req, res) => {
     });
 })
 
-app.listen(3000, () => {
-    console.log("Ready on port 3000");
+app.listen(5000, () => {
+    console.log("Ready on port 5000");
 });
