@@ -22,18 +22,18 @@ app.use(cookieParser());
 app.use(cors());
 
 app.get('/api/v1/unlink-richmenu', (req, res) => {    
-    client.unlinkRichMenuFromUser("U1661ebc86c41deed633fbbb13dfb5839");
+    client.unlinkRichMenuFromUser("U8b7168b339728ef53bd47cbe443da04a");
     res.json({
-        data: req.body
+        data: req.body.uid
     });
 });
 
 app.post('/api/v1/change-richmenu', (req, res) => {
     // save data in db
     const { firstname, lastname, email, userId } = req.body;
-    client.linkRichMenuToUser(userId, "richmenu-d350079265afbb5879edc15a12c8a872");
+    client.linkRichMenuToUser(req.body.uid,"richmenu-6e66bcc74a6a2e65a38eee364691becd");
     res.json({
-        data: req.body
+        data: req.body.uid
     });
 })
 
